@@ -1,7 +1,10 @@
 name: vk_video
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+repository: https://github.com/ultra-rony/vk_video
+homepage: https://rony.fun
+
+topics: [vk, vk-video, player, video]
 
 environment:
   sdk: ^3.6.0
