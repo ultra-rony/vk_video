@@ -22,24 +22,34 @@ class VKVideoController extends ChangeNotifier {
 
   /// Function to get the current volume level, returns an integer or null.
   Function() triggerVolume = () {};
+
+  /// Default volume set to 1.0
   double? getVolume = 1.0;
 
   /// Function to get the current playback time, returns an integer or null.
   Function() triggerCurrentTime = () {};
+
+  /// Set default value to 0
   int? getCurrentTime = 0;
 
   /// Function to get the total duration of the video, returns an integer or null.
   Function() triggerDuration = () {};
+
+  /// Default to null, indicating it might not be set initially
   int? getDuration = 0;
 
   /// Function to retrieve the current video quality/resolution.
   /// It returns a nullable VideoResolution, specifically 'null' if the quality is not set.
   Function() triggerQuality = () {};
+
+  /// Default to unidentified
   VideoResolutionEnum getQuality = VideoResolutionEnum.unidentified;
 
   /// Function to retrieve the current state of the player.
   /// It returns a nullable PlayerState, specifically 'null' if the state is not set.
   Function() triggerState = () {};
+
+  /// Default to unidentified
   PlayerStateEnum getState = PlayerStateEnum.unidentified;
 
   /// Function to mute the video.
@@ -50,6 +60,8 @@ class VKVideoController extends ChangeNotifier {
 
   /// Function to check if the video is muted, returns a boolean or null.
   Function() triggerIsMuted = () {};
+
+  /// Default to unmuted state
   bool getIsMuted = false;
 
   /// Variable to hold the video start time as a formatted string (HH:mm:ss).
@@ -59,39 +71,57 @@ class VKVideoController extends ChangeNotifier {
   /// False indicates that the video will not autoplay by default.
   bool isAutoPlay = false;
 
-  /// Method to set muted state and notify listeners.
+  /// Updates the muted state of the video and notifies listeners of the change.
   void setIsMuted(bool isMuted) {
+    /// Set the muted state to the new value passed as an argument.
     getIsMuted = isMuted;
+
+    /// Notify all listeners that the muted state has changed.
     notifyListeners();
   }
 
-  /// Method to set the volume and notify listeners.
+  /// Updates the current volume level of the video and notifies listeners of the change.
   void setVolume(double volume) {
+    /// Set the current volume level to the new value passed as an argument.
     getVolume = volume;
+
+    /// Notify all listeners that the volume level has changed.
     notifyListeners();
   }
 
-  /// Method to set the current playback time and notify listeners.
+  /// Updates the current playback time of the video and notifies listeners of the change.
   void setCurrentTime(int currentTime) {
+    /// Set the current playback time to the new value passed as an argument.
     getCurrentTime = currentTime;
+
+    /// Notify all listeners that the current playback time has changed.
     notifyListeners();
   }
 
-  /// Method to set the total duration and notify listeners.
+  /// Updates the current duration of the video and notifies listeners of the change.
   void setDuration(int duration) {
+    /// Set the current duration to the new value passed as an argument
     getDuration = duration;
+
+    /// Notify all listeners that the video duration has changed
     notifyListeners();
   }
 
-  /// Method to set the video quality and notify listeners.
+  /// Updates the current video quality/resolution and notifies listeners of the change.
   void setQuality(VideoResolutionEnum quality) {
+    /// Update the current video quality to the new value
     getQuality = quality;
+
+    /// Notify all listeners that the video quality has changed
     notifyListeners();
   }
 
-  /// Method to set the player state and notify listeners.
+  /// Updates the current state of the player and notifies listeners of the change.
   void setState(PlayerStateEnum playerState) {
+    /// Optionally, include logic to handle any specific state transitions, if necessary.
     getState = playerState;
+
+    /// Notify listeners about the change
     notifyListeners();
   }
 

@@ -27,6 +27,7 @@ class VideoPlayerHandler {
 
   /// InAppWebView controller instance
   final InAppWebViewController? inAppWebViewController;
+
   /// VK Video Controller instance
   final VKVideoController? vkVideoController;
 
@@ -59,7 +60,8 @@ class VideoPlayerHandler {
 
   /// Triggers and retrieves the current volume level from the web view.
   void triggerVolume() async {
-    final volume = await inAppWebViewController?.evaluateJavascript(source: "player.getVolume()");
+    final volume = await inAppWebViewController?.evaluateJavascript(
+        source: "player.getVolume()");
     vkVideoController?.setVolume(volume);
   }
 
@@ -72,14 +74,18 @@ class VideoPlayerHandler {
 
   /// Triggers and retrieves the total duration of the video from the web view.
   void triggerDuration() async {
-    final duration = await inAppWebViewController?.evaluateJavascript(source: "player.getDuration()");
+    final duration = await inAppWebViewController?.evaluateJavascript(
+        source: "player.getDuration()");
     vkVideoController?.setDuration((duration ?? 0).round());
   }
 
   /// Triggers and retrieves the current video quality/resolution from the web view.
   void triggerQuality() async {
-    await inAppWebViewController?.evaluateJavascript(source: "player.getQuality()").then((value) async {
-      vkVideoController?.setQuality(value.toString().toVideoResolutionPosition());
+    await inAppWebViewController
+        ?.evaluateJavascript(source: "player.getQuality()")
+        .then((value) async {
+      vkVideoController
+          ?.setQuality(value.toString().toVideoResolutionPosition());
     });
   }
 
@@ -95,14 +101,18 @@ class VideoPlayerHandler {
 
   /// Triggers and retrieves whether the audio is muted from the web view.
   void triggerIsMuted() async {
-    await inAppWebViewController?.evaluateJavascript(source: "player.isMuted()").then((value) {
+    await inAppWebViewController
+        ?.evaluateJavascript(source: "player.isMuted()")
+        .then((value) {
       vkVideoController?.setIsMuted(value);
     });
   }
 
   /// Triggers and retrieves the current state of the player from the web view.
   void triggerState() async {
-    await inAppWebViewController?.evaluateJavascript(source: "player.getState()").then((value) {
+    await inAppWebViewController
+        ?.evaluateJavascript(source: "player.getState()")
+        .then((value) {
       vkVideoController?.setState(value.toString().toPlayerStateEnum());
     });
   }
