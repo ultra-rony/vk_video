@@ -12,8 +12,8 @@
 
 ---
 
-### vk_video
 <p align="center">
+    <strong>vk_video</strong> <br>
     The vk_video package simplifies the integration of VK video playback into your Flutter apps. It supports the VK Video API, allowing easy embedding and control for a seamless media experience.<br>
    <span style="font-size: 0.9em"> Show some ❤️ and <a href="https://github.com/ultra-rony/youtube_web_player">star the repo</a> to support the project! </span>
 </p>
