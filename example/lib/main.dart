@@ -57,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("play"),
             ),
+
             TextButton(
               onPressed: () {
                 _controller?.onPause.call();

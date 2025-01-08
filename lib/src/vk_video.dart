@@ -49,9 +49,6 @@ class _VKVideoState extends State<VKVideo> with AutomaticKeepAliveClientMixin {
   /// Controller for video playback state.
   VKVideoController? _playerController;
 
-  /// Controller for the InAppWebView.
-  InAppWebViewController? _inAppWebViewController;
-
   VideoPlayerHandler? _videoPlayerHandler;
 
   /// Keeps the state of this widget alive when navigating
@@ -115,7 +112,6 @@ class _VKVideoState extends State<VKVideo> with AutomaticKeepAliveClientMixin {
               ),
               onWebViewCreated: (controller) {
                 /// Assign the WebView controller
-                _inAppWebViewController = controller;
                 _videoPlayerHandler = VideoPlayerHandler(
                   inAppWebViewController: controller,
                   vkVideoController: _playerController,
