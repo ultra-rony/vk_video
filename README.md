@@ -12,7 +12,7 @@
 
 ---
 
-# youtube_web_player
+<h1 align="center"><vk_video</h1>
 <p align="center">
     The vk_video package simplifies the integration of VK video playback into your Flutter apps. It supports the VK Video API, allowing easy embedding and control for a seamless media experience.<br>
    <span style="font-size: 0.9em"> Show some ❤️ and <a href="https://github.com/ultra-rony/youtube_web_player">star the repo</a> to support the project! </span>
@@ -24,13 +24,13 @@ To use this package, add it to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  youtube_web_player: ^1.1.9
+  vk_video: ^0.0.1
 ```
 
 or run the command
 
 ```bash
-flutter pub add youtube_web_player
+flutter pub add vk_video
 ```
 
 ## Using the player
