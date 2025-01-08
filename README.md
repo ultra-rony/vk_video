@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/logo.png" height="100" alt="youtube_web_player" />
+    <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/logo.png" height="200" alt="youtube_web_player" />
 </p>
 
 <p align="center">
