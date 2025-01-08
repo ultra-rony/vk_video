@@ -37,16 +37,13 @@ flutter pub add vk_video
 import
 
 ```dart
-import 'package:youtube_web_player/youtube_web_player.dart';
+import 'package:vk_video/vk_video.dart';
 ```
 
 ```dart
 VKVideo(
-    controller: _controller,
     videoOId: '-22822305',
     videoId: '456241864',
-    isAutoPlay: false,
-    videoResolutionEnum: VideoResolutionEnum.p480,
 ),
 ```
 
