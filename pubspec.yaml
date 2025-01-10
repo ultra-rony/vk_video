@@ -1,6 +1,6 @@
 name: vk_video
 description: "The vk_video package facilitates VK video playback integration in Flutter apps, supporting the VK Video API for seamless embedding and control."
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/ultra-rony/vk_video
 homepage: https://rony.fun
 
