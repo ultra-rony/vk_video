@@ -6,141 +6,144 @@ class VKVideoController extends ChangeNotifier {
   VKVideoController();
 
   /// Function to pause the video playback.
-  Function() onPause = () {};
+  Function() _onPause = () {};
+  Function() get onPause => _onPause;
 
   /// Function to start video playback.
-  Function() onPlay = () {};
+  Function() _onPlay = () {};
+  Function() get onPlay => _onPlay;
 
   /// Function to seek to a specific time in the video.
-  Function(Duration duration) onSeekTo = (Duration duration) {};
+  Function(Duration duration) _onSeekTo = (Duration duration) {};
+  Function(Duration duration) get onSeekTo => _onSeekTo;
 
   /// Function to seek to the live point in the video.
-  Function() onSeekLive = () {};
+  Function() _onSeekLive = () {};
+  Function() get onSeekLive => _onSeekLive;
 
   /// Function to set the volume, takes an integer as a parameter.
-  Function(int volume) onSetVolume = (int volume) {};
+  Function(int volume) _onSetVolume = (int volume) {};
+  Function(int volume) get onSetVolume => _onSetVolume;
 
   /// Function to get the current volume level, returns an integer or null.
-  Function() triggerVolume = () {};
+  Function() _triggerVolume = () {};
+  Function() get triggerVolume => _triggerVolume;
 
   /// Default volume set to 1.0
-  double? getVolume = 1.0;
+  double? _getVolume = 1.0;
+  double? get getVolume => _getVolume;
 
   /// Function to get the current playback time, returns an integer or null.
-  Function() triggerCurrentTime = () {};
+  Function() _triggerCurrentTime = () {};
+  Function() get triggerCurrentTime => _triggerCurrentTime;
 
   /// Set default value to 0
-  int? getCurrentTime = 0;
+  int? _getCurrentTime = 0;
+  int? get getCurrentTime => _getCurrentTime;
 
   /// Function to get the total duration of the video, returns an integer or null.
-  Function() triggerDuration = () {};
+  Function() _triggerDuration = () {};
+  Function() get triggerDuration => _triggerDuration;
 
   /// Default to null, indicating it might not be set initially
-  int? getDuration = 0;
+  int? _getDuration = 0;
+  int? get getDuration => _getDuration;
 
   /// Function to retrieve the current video quality/resolution.
   /// It returns a nullable VideoResolution, specifically 'null' if the quality is not set.
-  Function() triggerQuality = () {};
+  Function() _triggerQuality = () {};
+  Function() get triggerQuality => _triggerQuality;
 
   /// Default to unidentified
-  VideoResolutionEnum getQuality = VideoResolutionEnum.unidentified;
+  VideoResolutionEnum _getQuality = VideoResolutionEnum.unidentified;
+  VideoResolutionEnum get getQuality => _getQuality;
 
   /// Function to retrieve the current state of the player.
   /// It returns a nullable PlayerState, specifically 'null' if the state is not set.
-  Function() triggerState = () {};
+  Function() _triggerState = () {};
+  Function() get triggerState => _triggerState;
 
   /// Default to unidentified
-  PlayerStateEnum getState = PlayerStateEnum.unidentified;
+  PlayerStateEnum _getPlayerState = PlayerStateEnum.unidentified;
+  PlayerStateEnum get getPlayerState => _getPlayerState;
 
   /// Function to mute the video.
-  Function() onMute = () {};
+  Function() _onMute = () {};
+  Function() get onMute => _onMute;
 
   /// Function to unmute the video.
-  Function() onUnMute = () {};
+  Function() _onUnMute = () {};
+  Function() get onUnMute => _onUnMute;
 
   /// Function to check if the video is muted, returns a boolean or null.
-  Function() triggerIsMuted = () {};
+  Function() _triggerIsMuted = () {};
+  Function() get triggerIsMuted => _triggerIsMuted;
 
   /// Default to unmuted state
-  bool getIsMuted = false;
+  bool _getIsMuted = false;
+  bool get getIsMuted => _getIsMuted;
 
   /// Variable to hold the video start time as a formatted string (HH:mm:ss).
-  Duration videoStartTime = Duration.zero;
+  Duration _videoStartTime = Duration.zero;
+  Duration get videoStartTime => _videoStartTime;
 
   /// Variable to determine if the video should autoplay.
   /// False indicates that the video will not autoplay by default.
-  bool isAutoPlay = false;
+  bool _isAutoPlay = false;
+  bool get isAutoPlay => _isAutoPlay;
+
+  /// Notifies all the listeners of changes in the state.
+  void setState() {
+    /// Call notifyListeners() to inform any listeners that the internal state of this object has changed.
+    notifyListeners();
+  }
 
   /// Updates the muted state of the video and notifies listeners of the change.
   void setIsMuted(bool isMuted) {
     /// Set the muted state to the new value passed as an argument.
-    getIsMuted = isMuted;
-
-    /// Notify all listeners that the muted state has changed.
-    notifyListeners();
+    _getIsMuted = isMuted;
   }
 
   /// Updates the current volume level of the video and notifies listeners of the change.
   void setVolume(double volume) {
     /// Set the current volume level to the new value passed as an argument.
-    getVolume = volume;
-
-    /// Notify all listeners that the volume level has changed.
-    notifyListeners();
+    _getVolume = volume;
   }
 
   /// Updates the current playback time of the video and notifies listeners of the change.
   void setCurrentTime(int currentTime) {
     /// Set the current playback time to the new value passed as an argument.
-    getCurrentTime = currentTime;
-
-    /// Notify all listeners that the current playback time has changed.
-    notifyListeners();
+    _getCurrentTime = currentTime;
   }
 
   /// Updates the current duration of the video and notifies listeners of the change.
   void setDuration(int duration) {
     /// Set the current duration to the new value passed as an argument
-    getDuration = duration;
-
-    /// Notify all listeners that the video duration has changed
-    notifyListeners();
+    _getDuration = duration;
   }
 
   /// Updates the current video quality/resolution and notifies listeners of the change.
   void setQuality(VideoResolutionEnum quality) {
     /// Update the current video quality to the new value
-    getQuality = quality;
-
-    /// Notify all listeners that the video quality has changed
-    notifyListeners();
+    _getQuality = quality;
   }
 
   /// Updates the current state of the player and notifies listeners of the change.
-  void setState(PlayerStateEnum playerState) {
+  void setPlayerState(PlayerStateEnum playerState) {
     /// Optionally, include logic to handle any specific state transitions, if necessary.
-    getState = playerState;
-
-    /// Notify listeners about the change
-    notifyListeners();
+    _getPlayerState = playerState;
   }
 
   /// Method to set the video start time using a Duration.
   void setVideoStartTimeInSeconds(Duration videoStartTime) {
     /// Update the instance variable with the new formatted video start time.
-    this.videoStartTime = videoStartTime;
-
-    /// Notify all listeners about the change in video start time.
-    notifyListeners();
+    _videoStartTime = videoStartTime;
   }
 
   /// Method to set the autoplay status of the video.
   void setIsAutoPlay(bool isAutoPlay) {
     /// Update the instance variable with the new autoplay status.
-    this.isAutoPlay = isAutoPlay;
-
-    /// Notify listeners about the change in autoplay status.
-    notifyListeners();
+    _isAutoPlay = isAutoPlay;
   }
 
   /// Method to set the functions for controlling the player.
@@ -187,45 +190,42 @@ class VKVideoController extends ChangeNotifier {
     required Function() triggerState,
   }) {
     /// Set the pause function.
-    this.onPause = onPause;
+    _onPause = onPause;
 
     /// Set the play function.
-    this.onPlay = onPlay;
+    _onPlay = onPlay;
 
     /// Set the seek function.
-    this.onSeekTo = onSeekTo;
+    _onSeekTo = onSeekTo;
 
     /// Set the live seek function.
-    this.onSeekLive = onSeekLive;
+    _onSeekLive = onSeekLive;
 
     /// Set the volume function.
-    this.onSetVolume = onSetVolume;
+    _onSetVolume = onSetVolume;
 
     /// Set the function to get the current volume.
-    this.triggerVolume = triggerVolume;
+    _triggerVolume = triggerVolume;
 
     /// Set the function to get the current playback time.
-    this.triggerCurrentTime = triggerCurrentTime;
+    _triggerCurrentTime = triggerCurrentTime;
 
     /// Set the function to get the total duration.
-    this.triggerDuration = triggerDuration;
+    _triggerDuration = triggerDuration;
 
     /// Set the getQuality function.
-    this.triggerQuality = triggerQuality;
+    _triggerQuality = triggerQuality;
 
     /// Set the mute function.
-    this.onMute = onMute;
+    _onMute = onMute;
 
     /// Set the unmute function.
-    this.onUnMute = onUnMute;
+    _onUnMute = onUnMute;
 
     /// Set the function to check if the audio is muted.
-    this.triggerIsMuted = triggerIsMuted;
+    _triggerIsMuted = triggerIsMuted;
 
     /// Set the getState function.
-    this.triggerState = triggerState;
-
-    /// Notify listeners that the methods have changed.
-    notifyListeners();
+    _triggerState = triggerState;
   }
 }

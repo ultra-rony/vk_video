@@ -18,7 +18,7 @@ extension StringPlayerStateExtension on String {
       case 'error':
         return PlayerStateEnum.error;
       default:
-      // If none of the cases match, return unidentified state
+        // If none of the cases match, return unidentified state
         return PlayerStateEnum.unidentified;
     }
   }

@@ -113,7 +113,7 @@ class VideoPlayerHandler {
     await inAppWebViewController
         ?.evaluateJavascript(source: "player.getState()")
         .then((value) {
-      vkVideoController?.setState(value.toString().toPlayerStateEnum());
+      vkVideoController?.setPlayerState(value.toString().toPlayerStateEnum());
     });
   }
 }
