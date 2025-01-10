@@ -1,4 +1,4 @@
-## 1.0.0 - Stable Release
+## 1.0.0
 
 ### Added
 - Initial stable release of the `vk_video` package.
