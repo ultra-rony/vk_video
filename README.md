@@ -98,14 +98,14 @@ Add a listener to track changes in video playback position
 
 ```dart
 _controller?.addListener(() {
-        debugPrint("position: ${_controller!.getCurrentTime}");
-        debugPrint("currentTime: $currentTime");
-        debugPrint("isMute: $isMute");
-        debugPrint("duration: ${_controller?.getDuration}");
-        debugPrint("volume: ${_controller?.getVolume}");
-        debugPrint("quality: ${_controller?.getQuality}");
-        debugPrint("player state: ${_controller?.getPlayerState}");
-    };
+    debugPrint("position: ${_controller!.getCurrentTime}");
+    debugPrint("currentTime: $currentTime");
+    debugPrint("isMute: $isMute");
+    debugPrint("duration: ${_controller?.getDuration}");
+    debugPrint("volume: ${_controller?.getVolume}");
+    debugPrint("quality: ${_controller?.getQuality}");
+    debugPrint("player state: ${_controller?.getPlayerState}");
+  };
 );
 ```
 
