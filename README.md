@@ -126,12 +126,12 @@ _controller?.onSeekTo(Duration(seconds: _controller!.getCurrentTime!) + Duration
         </tr>
         <tr>
             <td style="text-align: center">
-                <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/image-10-01-25-07-57-2.png?raw=true" width="300" alt=""/>
+                <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/image-10-01-25-07-57-2.png?raw=true" width="600" alt=""/>
             </td>
         </tr>
         <tr>
             <td style="text-align: center">
-                <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/image-10-01-25-07-57.png?raw=true" width="300" alt=""/>
+                <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/image-10-01-25-07-57.png?raw=true" width="600" alt=""/>
             </td>
         </tr>
     </table>
