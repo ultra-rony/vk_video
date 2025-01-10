@@ -15,6 +15,7 @@ extension VideoQualityExtension on String {
       case "1080.0":
         return VideoResolutionEnum.p1080;
       default:
+
         /// If none of the cases match, return unidentified state
         return VideoResolutionEnum.unidentified;
     }
