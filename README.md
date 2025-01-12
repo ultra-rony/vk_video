@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-    <a href="https://pub.dev/packages/vk_video"><img src="https://img.shields.io/badge/pub-v1.0.2-blue" alt="Pub"></a>
+    <a href="https://pub.dev/packages/vk_video"><img src="https://img.shields.io/badge/pub-v1.0.3-blue" alt="Pub"></a>
+    <a href="https://github.com/ultra-rony/vk_video/releases"><img src="https://img.shields.io/badge/download-apk-blue" alt="apk"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="License: MIT"></a>
     <a href="https://pub.dev/packages/vk_video/score"><img src="https://img.shields.io/badge/points-160/160-green" alt="Points"></a>
     <a href="https://www.donationalerts.com/r/ultra_rony"><img src="https://img.shields.io/badge/support-donate-yellow" alt="Donate"></a>
@@ -23,7 +24,7 @@ To use this package, add it to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  vk_video: ^1.0.2
+  vk_video: ^1.0.3
 ```
 
 or run the command
