@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://pub.dev/packages/vk_video"><img src="https://img.shields.io/badge/pub-v1.0.4-blue" alt="Pub"></a>
+    <a href="https://pub.dev/packages/vk_video"><img src="https://img.shields.io/badge/pub-v1.0.5-blue" alt="Pub"></a>
     <a href="https://github.com/ultra-rony/vk_video/releases"><img src="https://img.shields.io/badge/download-apk-blue" alt="apk"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="License: MIT"></a>
     <a href="https://pub.dev/packages/vk_video/score"><img src="https://img.shields.io/badge/points-160/160-green" alt="Points"></a>
@@ -24,7 +24,7 @@ To use this package, add it to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  vk_video: ^1.0.4
+  vk_video: ^1.0.5
 ```
 
 or run the command
@@ -118,13 +118,11 @@ _controller?.onSeekTo(Duration(seconds: _controller!.getCurrentTime!) + Duration
 
 ## Examples
 
-<div style="text-align: center">
-    <table>
-        <tr>
-            <td style="text-align: center">
-                <img src="https://github.com/ultra-rony/vk_video/blob/developer/screenshots/image-10-01-25-07-57.png?raw=true" width="600" alt=""/>
-            </td>
-        </tr>
-    </table>
+<div align="center">
+    <img
+        src="https://github.com/ultra-rony/vk_video/blob/main/screenshots/example.png?raw=true"
+        width="300"
+        alt="Vertical example"
+    />
 </div>
 

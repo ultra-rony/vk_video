@@ -183,7 +183,7 @@ class _VKVideoState extends State<VKVideo> with AutomaticKeepAliveClientMixin {
   }
 
   /// Start a timer to check the state of the video every second.
-  _startVideoStateCheckTimer() {
+  void _startVideoStateCheckTimer() {
     _stateCheckTimer = Timer.periodic(const Duration(seconds: 1), (res) async {
       /// Trigger state checks on the video player
       /// Call the method to retrieve the current playback time of the video.
